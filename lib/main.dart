@@ -23,26 +23,46 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: DefaultTabController(
-        length: 2,
-        child: Scaffold(
-          appBar: AppBar(
-            bottom: TabBar(
-              tabs: [
-                Tab(
-                  icon: Icon(Icons.settings),
-                ),
-                Tab(
-                  icon: Icon(Icons.camera),
-                ),
-              ],
+      home: Scaffold(
+        body: CustomScrollView(
+          slivers: <Widget>[
+            SliverAppBar(
+              pinned: true,
+              expandedHeight: 200,
+              backgroundColor: Colors.red,
+              flexibleSpace: FlexibleSpaceBar(
+                title: Text("Easy Explations"),
+              ),
             ),
-          ),
-          body: TabBarView(
-            children: [One(), Two()],
-          ),
+            SliverList(
+                delegate: SliverChildListDelegate(<Widget>[
+              addDetails("One", "This Is One"),
+              addDetails("Two", "This Is Two"),
+              addDetails("Three", "This Is Three"),
+              addDetails("Four", "This Is Four"),
+              addDetails("Five", "This Is Five"),
+              addDetails("Six", "This Is Six"),
+              addDetails("Seven", "This Is Seven"),
+              addDetails("Eight", "This Is Eight"),
+              addDetails("Nine", "This Is Nine"),
+              addDetails("Ten", "This Is Ten"),
+            ]))
+          ],
         ),
       ),
     );
   }
+}
+
+Widget addDetails(
+  String name,
+  String description,
+) {
+  return ListTile(
+    title: Text(name),
+    subtitle: Text(description),
+    leading: CircleAvatar(
+      child: Text(name[0]),
+    ),
+  );
 }

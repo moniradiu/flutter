@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad60ace6-4da2-4f08-a3ab-4012634ec920" name="Default Changelist" comment="" />
+    <list default="true" id="ad60ace6-4da2-4f08-a3ab-4012634ec920" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1lQxWsC6baoy7VQ8GN7DrWUxnxe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -38,10 +44,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="527" y="176" key="#Notifications/0.0.1280.680@0.0.1280.680" timestamp="1610570422297" />
-    <state x="202" y="82" width="1060" height="473" key="AVDManager" timestamp="1611516445559">
+    <state x="202" y="82" width="1060" height="473" key="AVDManager" timestamp="1611683857285">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="202" y="82" width="1060" height="473" key="AVDManager/0.0.1280.680@0.0.1280.680" timestamp="1611516445559" />
+    <state x="202" y="82" width="1060" height="473" key="AVDManager/0.0.1280.680@0.0.1280.680" timestamp="1611683857285" />
     <state width="1220" height="153" key="GridCell.Tab.0.bottom" timestamp="1611437292347">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
