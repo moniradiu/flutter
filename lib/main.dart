@@ -6,16 +6,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter  Sweep gradient Demo',
+      title: 'Flutter focal point  gradient Demo',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('FlutterSweep Demo'),
+          title: const Text('Flutter focal point  Demo'),
         ),
         body: Center(
           child: Container(
             decoration: BoxDecoration(
-              gradient: SweepGradient(
-                colors: [Colors.yellow, Colors.green, Colors.blue],
+              gradient: RadialGradient(
+                colors: [Colors.yellow, Colors.red, Colors.purple],
+                center: Alignment(0.6, -0.3),
+                focal: Alignment(0.3, -0.1),
               ),
             ),
           ),
