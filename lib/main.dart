@@ -17,7 +17,13 @@ class MyApp extends StatelessWidget {
                       gradient: LinearGradient(
                           begin: Alignment.centerLeft,
                           end: Alignment.centerRight,
-                          colors: [Colors.purple, Colors.blue])))),
+                          colors: [
+                Colors.purple,
+                Colors.blue,
+                Colors.red,
+                Colors.lime,
+                Colors.green,
+              ])))),
         ));
   }
 }
