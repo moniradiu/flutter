@@ -14,11 +14,11 @@ class MyApp extends StatelessWidget {
         body: Center(
           child: Container(
             decoration: BoxDecoration(
-              gradient: RadialGradient(
-                colors: [Colors.yellow, Colors.red, Colors.purple],
-                center: Alignment(0.6, -0.3),
-                focal: Alignment(0.3, -0.1),
-                focalRadius: 1.0,
+              gradient: SweepGradient(
+                colors: [Colors.yellow, Colors.green, Colors.blue],
+                stops: [0.1, 0.6, 0.9],
+                startAngle: 0.9,
+                endAngle: 1.2,
               ),
             ),
           ),
