@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+// ignore: unused_import
+import 'package:image_picker/image_picker.dart';
+import 'dart:io';
 
 void main() => runApp(MyApp());
 
@@ -6,24 +9,46 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter focal point  gradient Demo',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Flutter focal point  Demo'),
+        home: Scaffold(
+            appBar: AppBar(title: Text('Pick Image From Camera & Gallery')),
+            body: Center(child: MyImagePicker())));
+  }
+}
+
+class MyImagePicker extends StatefulWidget {
+  @override
+  MyImagePickerState createState() => MyImagePickerState();
+}
+
+class MyImagePickerState extends State {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Column(
+      children: <Widget>[
+        Container(
+          height: 500,
+          width: double.infinity,
+          color: Colors.blue,
         ),
-        body: Center(
-          child: Container(
-            decoration: BoxDecoration(
-              gradient: SweepGradient(
-                colors: [Colors.yellow, Colors.green, Colors.blue],
-                stops: [0.1, 0.6, 0.9],
-                startAngle: 0.9,
-                endAngle: 1.2,
-              ),
+        Divider(),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            FloatingActionButton(
+              onPressed: () {},
+              child: Icon(Icons.camera),
             ),
-          ),
-        ),
-      ),
-    );
+            SizedBox(
+              width: 20,
+            ),
+            FloatingActionButton(
+              onPressed: () {},
+              child: Icon(Icons.photo_library),
+            ),
+          ],
+        )
+      ],
+    ));
   }
 }
