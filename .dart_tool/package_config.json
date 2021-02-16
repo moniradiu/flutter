@@ -98,6 +98,12 @@
       "languageVersion": "2.2"
     },
     {
+      "name": "flutter_web_plugins",
+      "rootUri": "file:///D:/server/htdocs/Development/flutter/packages/flutter_web_plugins",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
       "name": "http",
       "rootUri": "file:///D:/server/htdocs/Development/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.12.2",
       "packageUri": "lib/",
@@ -290,6 +296,24 @@
       "languageVersion": "2.10"
     },
     {
+      "name": "video_player",
+      "rootUri": "file:///D:/server/htdocs/Development/flutter/.pub-cache/hosted/pub.dartlang.org/video_player-0.11.1+5",
+      "packageUri": "lib/",
+      "languageVersion": "2.8"
+    },
+    {
+      "name": "video_player_platform_interface",
+      "rootUri": "file:///D:/server/htdocs/Development/flutter/.pub-cache/hosted/pub.dartlang.org/video_player_platform_interface-2.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.8"
+    },
+    {
+      "name": "video_player_web",
+      "rootUri": "file:///D:/server/htdocs/Development/flutter/.pub-cache/hosted/pub.dartlang.org/video_player_web-0.1.4+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.8"
+    },
+    {
       "name": "win32",
       "rootUri": "file:///D:/server/htdocs/Development/flutter/.pub-cache/hosted/pub.dartlang.org/win32-1.7.4+1",
       "packageUri": "lib/",
@@ -314,7 +338,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-02-15T18:27:32.328074Z",
+  "generated": "2021-02-16T18:33:08.768376Z",
   "generator": "pub",
   "generatorVersion": "2.10.4"
 }
