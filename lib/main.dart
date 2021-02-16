@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:image_picker/image_picker.dart';
-import 'dart:async';
-
-import 'dart:io';
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -12,7 +7,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-            appBar: AppBar(title: Text('Pick Image From Camera & Gallery')),
+            appBar: AppBar(title: Text('modal bottom sheet ')),
             body: Center(child: MyImagePicker())));
   }
 }
@@ -25,61 +20,46 @@ class MyImagePicker extends StatefulWidget {
 }
 
 class MyImagePickerState extends State {
-  File _image, _gallery;
-
-  Future CameraImage() async {
-    // ignore: non_constant_identifier_names
-    var Image = await ImagePicker.pickImage(source: ImageSource.camera);
-
-    setState(() {
-      _image = Image;
-    });
-  }
-
-  Future GalleryImage() async {
-    // ignore: non_constant_identifier_names
-    var Gallery = await ImagePicker.pickImage(source: ImageSource.gallery);
-
-    setState(() {
-      _gallery = Gallery;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(
-      children: <Widget>[
-        Container(
-          height: 500,
-          width: double.infinity,
-          color: Colors.blue,
-          child: _image == null
-              ? Center(child: Text("No Image Selected"))
-              : Image.file(_image),
-        ),
-        Divider(),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            FloatingActionButton(
-              onPressed: () {
-                CameraImage();
-              },
-              child: Icon(Icons.camera),
-            ),
-            SizedBox(
-              width: 20,
-            ),
-            FloatingActionButton(
-              onPressed: () {
-                GalleryImage();
-              },
-              child: Icon(Icons.photo_library),
-            ),
-          ],
-        )
-      ],
+        body: Center(
+      child: RaisedButton(
+        onPressed: () {
+          showModalBottomSheet(
+              context: context,
+              builder: (context) {
+                return Container(
+                  height: 250,
+                  child: Column(
+                    children: <Widget>[
+                      ListTile(
+                        title: Text("One"),
+                        subtitle: Text("This is One"),
+                        trailing: Icon(Icons.access_alarm),
+                      ),
+                      ListTile(
+                        title: Text("Two"),
+                        subtitle: Text("This is Two"),
+                        trailing: Icon(Icons.book_online),
+                      ),
+                      ListTile(
+                        title: Text("Three"),
+                        subtitle: Text("This is Three"),
+                        trailing: Icon(Icons.person),
+                      ),
+                      ListTile(
+                        title: Text("Four"),
+                        subtitle: Text("This is Four"),
+                        trailing: Icon(Icons.business_center),
+                      ),
+                    ],
+                  ),
+                );
+              });
+        },
+        child: Text("click me"),
+      ),
     ));
   }
 }
