@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-            appBar: AppBar(title: Text('modal bottom sheet ')),
+            appBar: AppBar(title: Text('simple alert dialog')),
             body: Center(child: MyImagePicker())));
   }
 }
@@ -26,35 +26,20 @@ class MyImagePickerState extends State {
         body: Center(
       child: RaisedButton(
         onPressed: () {
-          showModalBottomSheet(
+          showDialog(
               context: context,
               builder: (context) {
-                return Container(
-                  height: 250,
-                  child: Column(
-                    children: <Widget>[
-                      ListTile(
-                        title: Text("One"),
-                        subtitle: Text("This is One"),
-                        trailing: Icon(Icons.access_alarm),
-                      ),
-                      ListTile(
-                        title: Text("Two"),
-                        subtitle: Text("This is Two"),
-                        trailing: Icon(Icons.book_online),
-                      ),
-                      ListTile(
-                        title: Text("Three"),
-                        subtitle: Text("This is Three"),
-                        trailing: Icon(Icons.person),
-                      ),
-                      ListTile(
-                        title: Text("Four"),
-                        subtitle: Text("This is Four"),
-                        trailing: Icon(Icons.business_center),
-                      ),
-                    ],
-                  ),
+                return AlertDialog(
+                  title: Text("Alert"),
+                  content: Text("This is a simple alert dialog"),
+                  actions: <Widget>[
+                    RaisedButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: Text("Ok"),
+                    )
+                  ],
                 );
               });
         },
