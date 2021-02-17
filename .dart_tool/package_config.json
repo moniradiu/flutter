@@ -56,6 +56,12 @@
       "languageVersion": "2.0"
     },
     {
+      "name": "curved_navigation_bar",
+      "rootUri": "file:///D:/server/htdocs/Development/flutter/.pub-cache/hosted/pub.dartlang.org/curved_navigation_bar-0.3.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
       "name": "fake_async",
       "rootUri": "file:///D:/server/htdocs/Development/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0-nullsafety.1",
       "packageUri": "lib/",
@@ -338,7 +344,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-02-16T18:33:08.768376Z",
+  "generated": "2021-02-16T21:56:35.424636Z",
   "generator": "pub",
   "generatorVersion": "2.10.4"
 }

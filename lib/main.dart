@@ -1,50 +1,81 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:first_app/HomePage.dart';
+import 'package:first_app/IdeaPage.dart';
+import 'package:first_app/WorkPage.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
-            appBar: AppBar(title: Text('simple alert dialog')),
-            body: Center(child: MyImagePicker())));
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Curved Novigation Bar',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(),
+    );
   }
 }
 
-class MyImagePicker extends StatefulWidget {
+class MyHomePage extends StatefulWidget {
   @override
-  MyImagePickerState createState() => MyImagePickerState();
-
-  void setState(Null Function() param0) {}
+  _MyHomePageState createState() => _MyHomePageState();
 }
 
-class MyImagePickerState extends State {
+class _MyHomePageState extends State<MyHomePage> {
+  int selectedpage = 0; //initial value
+
+  final _pageOptions = [
+    HomePage(),
+    WorkPage(),
+    IdeaPage()
+  ]; // listing of all 3 pages index wise
+
+  final bgcolor = [
+    Colors.orange,
+    Colors.pink,
+    Colors.greenAccent
+  ]; // changing color as per active index value
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Center(
-      child: RaisedButton(
-        onPressed: () {
-          showDialog(
-              context: context,
-              builder: (context) {
-                return AlertDialog(
-                  title: Text("Alert"),
-                  content: Text("This is a simple alert dialog"),
-                  actions: <Widget>[
-                    RaisedButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      child: Text("Ok"),
-                    )
-                  ],
-                );
-              });
+      body: _pageOptions[
+          selectedpage], // initial value is 0 so HomePage will be shown
+      bottomNavigationBar: CurvedNavigationBar(
+        height: 50,
+        buttonBackgroundColor: Colors.blueAccent,
+        backgroundColor: bgcolor[selectedpage],
+        color: Colors.white,
+        animationCurve: Curves.linearToEaseOut,
+        items: <Widget>[
+          Icon(
+            Icons.home,
+            size: 30,
+            color: Colors.black,
+          ),
+          Icon(
+            Icons.work,
+            size: 30,
+            color: Colors.black,
+          ),
+          Icon(
+            Icons.wb_incandescent,
+            size: 30,
+            color: Colors.black,
+          )
+        ],
+        onTap: (index) {
+          setState(() {
+            selectedpage =
+                index; // changing selected page as per bar index selected by the user
+          });
         },
-        child: Text("click me"),
       ),
-    ));
+    );
   }
 }
