@@ -58,6 +58,16 @@ class _MyHomePageState extends State<MyHomePage> {
             size: 30,
             color: Colors.black,
           ),
+          // Icon(
+          //   Icons.person_add,
+          //   size: 30,
+          //   color: Colors.black,
+          // ),
+          // Icon(
+          //   Icons.menu,
+          //   size: 30,
+          //   color: Colors.black,
+          // ),
           Icon(
             Icons.work,
             size: 30,
