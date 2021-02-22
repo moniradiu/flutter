@@ -2,6 +2,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:first_app/HomePage.dart';
 import 'package:first_app/IdeaPage.dart';
 import 'package:first_app/WorkPage.dart';
+// import 'package:first_app/ParsonPage.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Curved Novigation Bar',
+      title: 'Flutter Curved Navigation Bar',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -33,12 +34,14 @@ class _MyHomePageState extends State<MyHomePage> {
     HomePage(),
     WorkPage(),
     IdeaPage()
+    // ParsonPage(),
   ]; // listing of all 3 pages index wise
 
   final bgcolor = [
     Colors.orange,
     Colors.pink,
     Colors.greenAccent
+    // Colors.red,
   ]; // changing color as per active index value
 
   @override
@@ -58,11 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
             size: 30,
             color: Colors.black,
           ),
-          // Icon(
-          //   Icons.person_add,
-          //   size: 30,
-          //   color: Colors.black,
-          // ),
+
           // Icon(
           //   Icons.menu,
           //   size: 30,
@@ -77,7 +76,12 @@ class _MyHomePageState extends State<MyHomePage> {
             Icons.wb_incandescent,
             size: 30,
             color: Colors.black,
-          )
+          ),
+          // Icon(
+          //   Icons.person_add,
+          //   size: 30,
+          //   color: Colors.black,
+          // ),
         ],
         onTap: (index) {
           setState(() {
